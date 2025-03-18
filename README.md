@@ -5,7 +5,7 @@ A powerful command-line interface tool that simplifies working with Vite project
 ## Installation
 
 ```bash
-npm install -g speeed  # Replace with your actual package name
+npm install -g speeed 
 ```
 
 ## Features
