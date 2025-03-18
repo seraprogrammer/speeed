@@ -1,139 +1,166 @@
-# Speeed CLI Tool
+# 🚀 Speeed.js CLI - Accelerate Your Development Workflow
 
-A powerful command-line interface tool that simplifies working with Vite projects and extends npm functionality.
+A turbocharged CLI tool that combines package management, project scaffolding,
+and Git shortcuts in one powerful utility. Speeed.js streamlines your
+development process with intuitive commands and zero configuration.
 
-## Installation
+## 📦 Installation
 
 ```bash
-npm install -g speeed  # Install the CLI tool globally
+npm install -g speeed
 ```
 
-## Features
+## 🎯 Features
 
-- **Quick Project Creation**: Create new Vite projects with various frameworks
-- **Template Support**: Use official Vite templates or custom templates from GitHub
-- **Custom Commands**: Define and manage your own CLI commands
-- **Git Integration**: Initialize git repositories with a single command
-- **NPM Wrapper**: Simplified npm commands for package management
+- **Zero-config project templates** - Create new projects in seconds
+- **Enhanced npm commands** - Simplified package management
+- **Git shortcuts** - Streamlined version control workflows
+- **Custom command system** - Create aliases for your most-used commands
+- **Cross-platform support** - Works on Windows, macOS, and Linux
 
-## Available Commands
+## 🛠️ Core Commands
 
-### Project Creation
-
-Create new projects using various frameworks:
+### Package Management
 
 ```bash
-i vanilla my-app          # Create vanilla JS project
-i react my-app            # Create React project
-i vue my-app              # Create Vue project
-i svelte my-app           # Create Svelte project
-i preact my-app           # Create Preact project
-i lit my-app              # Create Lit project
-i solid my-app            # Create Solid project
-i qwik my-app             # Create Qwik project
-i react-swc my-app        # Create React project with SWC
+# Install packages
+i add [package] [--global|--save-dev|--save-exact|--legacy-peer-deps]
 
-# TypeScript versions can be created in two ways:
-i react my-app --typescript  # Using --typescript flag
-i react ts my-app           # Using 'ts' shorthand
+# Remove packages
+i remove <package> [--global]
+
+# Update packages
+i update [package] [--global]
+
+# Check outdated packages
+i outdated [--global]
+
+# Run scripts
+i run <script>
+
+# List installed packages
+i list-packages [--global]
 ```
 
-### Template Management
+### Project Scaffolding
 
 ```bash
-i list                    # List all available official Vite templates
-i ready                   # Show available templates from GitHub repository
-i i <templateName>        # Install a template from the GitHub repository
+# Create new projects
+i react <appName> [--typescript]
+i vue <appName> [--typescript]
+i svelte <appName> [--typescript]
+i solid <appName> [--typescript]
+i qwik <appName> [--typescript]
+i lit <appName> [--typescript]
+i preact <appName> [--typescript]
+i vanilla <appName> [--typescript]
 ```
 
-### Project Management
+### Git Shortcuts
 
 ```bash
-i init-git <appName>      # Initialize git repository in app directory
-i install <appName>       # Install dependencies for specified app
-i dev <appName>           # Start development server for specified app
+# Common workflows
+i git fire    # Quick commit with random message
+i git new     # Initialize repo with first commit
+i git push    # Push with auto-set upstream
+
+# Advanced shortcuts
+i git s       # status
+i git a       # add all
+i git c       # commit
+i git p       # push
+i git pl      # pull
+i git b       # branch
+i git co      # checkout
+i git l       # log --oneline
+i git d       # diff
+i git f       # fetch
+i git m       # merge
+i git r       # reset
+i git st      # stash
+i git cl      # clone
+i git rv      # revert
+i git rb      # rebase
 ```
 
 ### Custom Commands
 
 ```bash
-i set <commandName> <commandString>  # Set a custom command globally
-i list-custom                        # List all custom commands
-i unset <commandName>                # Remove a custom command
-i show                               # Show all available commands
+# Save a custom command
+i set <name> <command>
+
+# List all custom commands
+i list-custom
+
+# Remove a custom command
+i unset <commandName>
+
+# Show all available commands (built-in and custom)
+i show
 ```
 
-### Package Management
+## 🌟 Templates
+
+Pre-configured Vite templates with optional TypeScript support:
+
+- **React** - Modern UI library with JSX
+- **Vue** - Progressive JavaScript framework
+- **Svelte** - Compile-time framework with no virtual DOM
+- **Solid** - Reactive JavaScript UI library
+- **Qwik** - Resumable JavaScript framework
+- **Lit** - Simple library for building web components
+- **Preact** - Lightweight alternative to React
+- **Vanilla** - Pure JavaScript starter
+
+## 🚨 Advanced Features
+
+### Node Script Execution
 
 ```bash
-i add                     # Install all dependencies (npm install)
-i add <packageName>       # Install specific package
-i add <packageName> --save-dev  # Install as dev dependency
-i add <packageName> --global    # Install globally
-i add <packageName> --save-exact  # Install exact version
-i add <packageName> --legacy-peer-deps  # Use legacy peer deps
-
-i remove <packageName>    # Uninstall a package
-i remove <packageName> --global  # Uninstall global package
-
-i update                  # Update all packages
-i update <packageName>    # Update specific package
-i update --global         # Update global packages
-
-i list                    # List installed packages
-i list --global           # List global packages
-
-i outdated                # Check for outdated packages
-i outdated --global       # Check for outdated global packages
-
-i run <script>            # Run a package script
+i n <file>           # Run JS files with minimal output
+i run-node <file>    # Alternative syntax
 ```
 
-## Examples
+### Template Management
 
-Create a new React TypeScript project:
 ```bash
-# Two equivalent ways to create a React TypeScript project:
-i react my-react-app --typescript
-# OR
-i react ts my-react-app
-
-cd my-react-app
-i add
-i dev .
+i ready              # List available templates
+i i <template>       # Install GitHub templates
 ```
 
-Install a template from GitHub:
+### Project Management
+
 ```bash
-i i react-tailwind
-cd react-tailwind-app
-i add
-i dev .
+i install <appName>  # Install dependencies
+i dev <appName>      # Start development server
+i list               # List all available Vite templates
 ```
 
-Create a custom command:
+### Custom Configuration
+
+Persistent commands are stored in `~/.vite-cli-custom-commands.json` for easy
+access across sessions.
+
+## 🐛 Error Handling
+
+Speeed.js provides robust error handling:
+
+- Color-coded status messages for clear feedback
+- Automatic error recovery when possible
+- Detailed stack traces in debug mode
+- Graceful termination with SIGINT handling
+
+## 🔄 Update CLI
+
 ```bash
-i set build-prod "npm run build && npm run preview"
-i build-prod
+i update speeed -g
 ```
 
-## Configuration
+## 🤝 Contributing
 
-Custom commands are stored in `~/.vite-cli-custom-commands.json`.
+PRs welcome! See our [GitHub repo](https://github.com/seraprogrammer/speeed) for
+contribution guidelines.
 
-## Error Handling
+## 📄 License
 
-The CLI provides helpful error messages and gracefully handles exceptions. Look for emoji indicators:
-- ✅ Success
-- ❌ Error
-- ⚠️ Warning
-- 📦 Process running
-- 🚀 Script execution
-
-## License
-
-MIT  <!-- Adjust as needed -->
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
+ISC © [seraprogrammer](https://sera.dev)
