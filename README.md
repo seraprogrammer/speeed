@@ -114,3 +114,9 @@ npm install -g speeed
   i dev | i -dev          # Start development server
   i build | i -build      # Build project
 ```
+
+# API:
+
+```bash
+  i api | i -api          # Get a random API endpoint
+```
