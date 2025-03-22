@@ -107,3 +107,10 @@ npm install -g speeed
   i pnpm get <package> | i -pn get <package>  # PNPM install
   i pnpm <file> | i -pn <file>  # Run with PNPM
 ```
+
+# Development Server:
+
+```bash
+  i dev | i -dev          # Start development server
+  i build | i -build      # Build project
+```
