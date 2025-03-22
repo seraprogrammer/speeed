@@ -81,6 +81,7 @@ npm install -g speeed
 
 ```bash
   i vite | i -vite         # Create Vite project
+  i vite -D | i -vite -D   # Install Vite as a dev dependency
   i vilo | i -vilo         # Create Vilo project
   i next | i -next         # Create Next.js project
 ```
@@ -105,11 +106,4 @@ npm install -g speeed
   i pnpm i | i -pn i          # Install PNPM globally
   i pnpm get <package> | i -pn get <package>  # PNPM install
   i pnpm <file> | i -pn <file>  # Run with PNPM
-```
-
-# Scoop Package Manager (Windows):
-
-```bash
-  i scoop | i -sc          # Install Scoop
-  i scoop install <pkg> | i -sc install <pkg>  # Install package
 ```
