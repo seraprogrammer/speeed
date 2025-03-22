@@ -1,1 +1,21 @@
-https://jsonplaceholder.typicode.com/posts
+[
+  {
+    "id": 1,
+    "api": "https://jsonplaceholder.typicode.com/posts"
+  },
+  {
+    "id": 2,
+    "api": "https://jsonplaceholder.typicode.com/comments"
+  },
+  {
+    "id": 3,
+    "api": "https://jsonplaceholder.typicode.com/albums"
+  },
+  {
+    "id": 4,
+    "api": "https://jsonplaceholder.typicode.com/users"
+  },
+  {
+
+  }
+]
