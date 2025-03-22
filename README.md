@@ -106,3 +106,10 @@ npm install -g speeed
   i pnpm get <package> | i -pn get <package>  # PNPM install
   i pnpm <file> | i -pn <file>  # Run with PNPM
 ```
+
+# Scoop Package Manager (Windows):
+
+```bash
+  i scoop | i -sc          # Install Scoop
+  i scoop install <pkg> | i -sc install <pkg>  # Install package
+```
