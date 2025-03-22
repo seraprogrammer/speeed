@@ -16,6 +16,23 @@
     "api": "https://jsonplaceholder.typicode.com/users"
   },
   {
-
+    "id": 5,
+    "api": "https://gorest.co.in/public/v2/users"
+  },
+  {
+    "id": 6,
+    "api": "https://gorest.co.in/public/v2/posts"
+  },
+  {
+    "id": 7,
+    "api": "https://gorest.co.in/public/v2/comments"
+  },
+  {
+    "id": 8,
+    "api": "https://gorest.co.in/public/v2/todos"
+  },
+  {
+    "id" : 9,
+    "api" : "https://reqres.in/api/users"
   }
 ]
