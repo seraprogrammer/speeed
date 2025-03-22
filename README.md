@@ -20,147 +20,89 @@ npm install -g speeed
 
 ## 🛠️ Core Commands
 
-### Package Management
+# Help & Version:
 
 ```bash
-# Install packages
-i add [package] [--global|--save-dev|--save-exact|--legacy-peer-deps]
+ i help | i -h # List commands i version
+ i -v # Show version
 
-# Remove packages
-i remove <package> [--global]
-
-# Update packages
-i update [package] [--global]
-
-# Check outdated packages
-i outdated [--global]
-
-# Run scripts
-i run <script>
-
-# List installed packages
-i list-packages [--global]
 ```
 
-### Project Scaffolding
+# Terminal:
 
 ```bash
-# Create new projects
-i react <appName> [--typescript]
-i vue <appName> [--typescript]
-i svelte <appName> [--typescript]
-i solid <appName> [--typescript]
-i qwik <appName> [--typescript]
-i lit <appName> [--typescript]
-i preact <appName> [--typescript]
-i vanilla <appName> [--typescript]
+  i ziro | i 0    # Clear terminal
 ```
 
-### Git Shortcuts
+# System Information:
 
 ```bash
-# Common workflows
-i git fire    # Quick commit with random message
-i git new     # Initialize repo with first commit
-i git push    # Push with auto-set upstream
-
-# Advanced shortcuts
-i git s       # status
-i git a       # add all
-i git c       # commit
-i git p       # push
-i git pl      # pull
-i git b       # branch
-i git co      # checkout
-i git l       # log --oneline
-i git d       # diff
-i git f       # fetch
-i git m       # merge
-i git r       # reset
-i git st      # stash
-i git cl      # clone
-i git rv      # revert
-i git rb      # rebase
+  i ping                  # Basic System Info
+  i ping -p | i -ping -p     # Detailed System Info
 ```
 
-### Custom Commands
+# Node.js Script:
 
 ```bash
-# Save a custom command
-i set <name> <command>
-
-# List all custom commands
-i list-custom
-
-# Remove a custom command
-i unset <commandName>
-
-# Show all available commands (built-in and custom)
-i show
+ i run my_script.js [arg1 arg2...]
 ```
 
-## 🌟 Templates
-
-Pre-configured Vite templates with optional TypeScript support:
-
-- **React** - Modern UI library with JSX
-- **Vue** - Progressive JavaScript framework
-- **Svelte** - Compile-time framework with no virtual DOM
-- **Solid** - Reactive JavaScript UI library
-- **Qwik** - Resumable JavaScript framework
-- **Lit** - Simple library for building web components
-- **Preact** - Lightweight alternative to React
-- **Vanilla** - Pure JavaScript starter
-
-## 🚨 Advanced Features
-
-### Node Script Execution
+# Git Operations:
 
 ```bash
-i n <file>           # Run JS files with minimal output
-i run-node <file>    # Alternative syntax
+  i init | i -i           # Init repo
+  i add | i -a            # Stage all
+  i add my_file.txt | i -a my_file.txt   # Stage file
+  i commit "msg" | i -c "msg"  # Commit
+  i reBranch | i -br       # Rename branch to main
+  i status | i -s          # Git status
+  i push | i -p            # Push
+  i push -f | i -p -f       # Force push
+  i remote | i -r          # Show remotes
+  i remove | i -rm          # Remove origin remote
+  i addRemote <url> | i -add <url>   # Add remote
+  i branch | i -b          # List branches
+  i checkout <branch> | i -c <branch> # Switch branch
+  i log | i -l             # Git log
+  i merge <branch> | i -m <branch> # Merge branch
+  i reset <commit> | i -re <commit> # Reset HEAD
+  i clone <url> | i -cp <url>    # Clone repo
+  i git | i -git           # Init, add, commit (random msg), rename branch
 ```
 
-### Template Management
+# Templates:
 
 ```bash
-i ready              # List available templates
-i i <template>       # Install GitHub templates
+  i ready | i -rd          # List templates
+  i install <template> | i -temp <template> # Install template
 ```
 
-### Project Management
+# Project Creation:
 
 ```bash
-i install <appName>  # Install dependencies
-i dev <appName>      # Start development server
-i list               # List all available Vite templates
+  i vite | i -vite         # Create Vite project
+  i vilo | i -vilo         # Create Vilo project
+  i next | i -next         # Create Next.js project
 ```
 
-### Custom Configuration
-
-Persistent commands are stored in `~/.vite-cli-custom-commands.json` for easy
-access across sessions.
-
-## 🐛 Error Handling
-
-Speeed.js provides robust error handling:
-
-- Color-coded status messages for clear feedback
-- Automatic error recovery when possible
-- Detailed stack traces in debug mode
-- Graceful termination with SIGINT handling
-
-## 🔄 Update CLI
+# TypeScript:
 
 ```bash
-i update speeed -g
+  i ts <file>.ts | i -ts <file>.ts  # Run TS file
+  i ts <file>.ts -c | i -ts <file>.ts -c  # Compile TS file
 ```
 
-## 🤝 Contributing
+# Package Management (NPM):
 
-PRs welcome! See our [GitHub repo](https://github.com/seraprogrammer/speeed) for
-contribution guidelines.
+```bash
+  i get <package> | i -g <package>    # Install local
+  i get <package> g       # Install global
+```
 
-## 📄 License
+# PNPM Management:
 
-ISC © [seraprogrammer](https://sera.dev)
+```bash
+  i pnpm i | i -pn i          # Install PNPM globally
+  i pnpm get <package> | i -pn get <package>  # PNPM install
+  i pnpm <file> | i -pn <file>  # Run with PNPM
+```
